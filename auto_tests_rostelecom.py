@@ -129,7 +129,7 @@ def test_check_one_time_code(selenium):
     form.address.send_keys(valid_phone)
 
     # устанавливаем паузу в 30 с для ручного ввода капчи при необходимости
-    sleep(30)
+    sleep(40)
     form.get_click()
 
     otc = form.driver.find_element(By.ID, 'rt-code-0')
