@@ -128,7 +128,7 @@ def test_check_one_time_code(selenium):
     # ввод телефона
     form.address.send_keys(valid_phone)
 
-    # устанавливаем паузу в 30 с для ручного ввода капчи при необходимости
+    # устанавливаем паузу в 40 с для ручного ввода капчи при необходимости
     sleep(40)
     form.get_click()
 
