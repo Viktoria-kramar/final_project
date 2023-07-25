@@ -27,30 +27,30 @@ def test_check_automatic_change_tub(selenium):
     form = AuthForm(selenium)
 
     # вводим телефон
-    form.username.send_keys('+78005553535')
-    form.password.send_keys('p@ssw0rd')
+    form.username.send_keys('+79012345678')
+    form.password.send_keys('qwerty1')
     sleep(5)
 
     assert form.placeholder.text == 'Мобильный телефон'
 
     # очищаем поле логина
-    form.username.send_keys(Keys.CONTROL, 'a')
+    form.username.send_keys(Keys.CONTROL, 'abc')
     form.username.send_keys(Keys.DELETE)
 
     # вводим почту
-    form.username.send_keys('mail@mail.ru')
-    form.password.send_keys('p@ssw0rd')
+    form.username.send_keys('mymil@mail.ru')
+    form.password.send_keys('qwerty1')
     sleep(5)
 
     assert form.placeholder.text == 'Электронная почта'
 
     # очищаем поле логина
-    form.username.send_keys(Keys.CONTROL, 'a')
+    form.username.send_keys(Keys.CONTROL, 'abc')
     form.username.send_keys(Keys.DELETE)
 
     # вводим логин
-    form.username.send_keys('user007')
-    form.password.send_keys('p@ssw0rd')
+    form.username.send_keys('USER0123')
+    form.password.send_keys('qwerty1')
     sleep(5)
 
     assert form.placeholder.text == 'Логин'
@@ -61,7 +61,7 @@ def test_check_automatic_change_tub(selenium):
 
     # вводим лицевой счет
     form.username.send_keys('012345678901')
-    form.password.send_keys('p@ssw0rd')
+    form.password.send_keys('qwerty1')
     sleep(5)
 
     assert form.placeholder.text == 'Лицевой счёт'
@@ -86,7 +86,7 @@ def test_check_failure_auth_phone(selenium):
 
     # вводим телефон и пароль
     form.username.send_keys('+78005553535')
-    form.password.send_keys('p@ssw0rd')
+    form.password.send_keys('qwerty1')
     sleep(5)
     form.btn_click()
 
@@ -112,8 +112,8 @@ def test_check_failure_auth_email(selenium):
     form = AuthForm(selenium)
 
     # вводим почту и пароль
-    form.username.send_keys('mail@mail.ru')
-    form.password.send_keys('p@ssw0rd')
+    form.username.send_keys('mymail@mail.ru')
+    form.password.send_keys('qwerty1')
     sleep(5)
     form.btn_click()
 
