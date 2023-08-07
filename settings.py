@@ -1,3 +1,3 @@
-valid_email = 'minimir694@gmail.com'
-valid_password = 'JQ#Fd+T8i'
-valid_phone = "+79525262686"
+valid_email = '***@gmail.com'
+valid_password = '***'
+valid_phone = "+7***"
